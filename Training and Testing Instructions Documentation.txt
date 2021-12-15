@@ -1,0 +1,18 @@
+Documentation for running the self-supervised training and testing the representation learned using downstrem tasks semantic segmentation and image classification.
+
+Cem500k dataset can be downloaded from ----> https://www.ebi.ac.uk/empiar/EMPIAR-10592/
+Lucchi++ and Kasthuri++ can be downloaded -----> from https://sites.google.com/view/connectomics
+
+
+
+1) Preprocess the cem500k dataset
+	
+	1) The file preprocess.ipynb contains the code to divide the dataset into 2 parts: majority and minority. Majority dataset contains images belonging to 3 organisms namely "humans", "Mouse" and 	"C.elegans". And the rest of the image is categorised as minority data. Minority data is used in pre-training and majority data is used in 
+	
+2) Pre-training
+	1) The file "byol_attention_colorization.py" contains the code to pre-train the self-attention model using our method. The path to the minority data is used in the code.
+	2) Similarly "byol_resnet_colorization.py" contains the code to pre-train the resnet model using our method. The path to the minority data is used in the code.
+	
+3) Testing: Segmentation
+	1) The file mitochondria-semantic-segmentation.ipynb contains the code to perform the task of semantic segmentation on the two datasets: Lucchi++ and Kasthuri++.   
+
